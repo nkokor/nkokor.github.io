@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nikolina Kokor</title>
+  <meta name="description" content="Nikolina Kokor — Software Engineer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+  <style>
+    :root{
+      --accent:#160e11;
+      --bg:#fff8fb;
+      --card:#ffffff;
+      --muted:#7a5a6d;
+      --glass: rgba(255,255,255,0.15);
+      --radius:14px;
+      --maxw:1000px;
+    }
+
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{
+      font-family: 'Montserrat', serif;
+      min-height:100vh;
+      background: var(--bg);
+      color:#3a2c3c;
+      scroll-behavior: smooth;
+    }
+
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    nav{
+      position: sticky;
+      top:0;
+      width:100%;
+      background: rgba(255,255,255,0.95);
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      padding:12px 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      z-index:1000;
+    }
+    .nav-logo{
+      font-weight:700;
+      font-size:20px;
+    }
+    .nav-links{
+      display:flex;
+      gap:18px;
+    }
+    .nav-links a{
+      font-weight:500;
+      font-size:15px;
+    }
+    .nav-toggle{
+      display:none;
+      font-size:24px;
+      cursor:pointer;
+    }
+
+    .profile-section{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:60px 18px 20px 18px;
+      text-align:center;
+    }
+
+    .profile-pic{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      object-fit:cover;
+      box-shadow:0 8px 24px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover{transform: scale(1.05);}
+
+    .profile-info h1{
+      margin-top:20px;
+      font-size:36px;
+      color:#3a2c3c;
+    }
+
+    .profile-info .sub{
+      color:#5a3d5d;
+      font-size:16px;
+      margin-top:6px;
+    }
+
+    .wrap{
+      max-width:var(--maxw);
+      width:100%;
+      margin:0 auto;
+      padding:32px 18px 32px 18px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:24px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom:28px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .section-title{
+      font-size:22px;
+      margin-bottom:14px;
+      font-weight:700;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+    }
+    .pill{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      background:var(--glass);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      color:var(--muted);
+      backdrop-filter: blur(5px);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .pill:hover{
+      transform: translateY(-2px);
+      background:rgba(255,255,255,0.35);
+    }
+
+    #contact ul{list-style:none; padding:0; line-height:2;}
+    #contact li i{width:20px;}
+
+    footer{
+      margin-top:32px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    @media (max-width:768px){
+      .nav-links{
+        position: absolute;
+        top:60px;
+        right:0;
+        background: rgba(255,255,255,0.95);
+        flex-direction: column;
+        width:200px;
+        display:none;
+        padding:12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+      .nav-links a{padding:8px 0;}
+      .nav-links.active{display:flex;}
+      .nav-toggle{display:block;}
+      .profile-info h1{font-size:28px;}
+      .card{padding:18px;}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-toggle"><i class="fas fa-bars"></i></div>
+    <div class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="profile-section" id="about">
+    <img src="profile-image.jpg" alt="Nikolina Kokor" class="profile-pic">
+    <div class="profile-info">
+      <h1>Nikolina Kokor</h1>
+      <div class="sub">Master of Computer Science and Informatics · Aspiring Software Engineer</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="card">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am an Aspiring Software Engineer with a Bachelor's and Master's degree in Computer Science and Informatics 
+        from the Faculty of Electrical Engineering, University of Sarajevo. 
+      </p>
+      <p>
+        I have experience building web applications, REST APIs, 
+        and 3D games in Unity, and I am proficient in technologies such as C#, Java, Python, JavaScript/TypeScript, React, Spring, SQL, and Unity. 
+      </p>
+      <p>
+        In my free time, I enjoy fitness, reading, game development, and watching animated films. I am passionate about creating interactive digital experiences 
+        and constantly exploring new technologies to bring ideas to life, including AI integration into solutions.
+      </p>
+    </section>
+
+    <section class="card" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <span class="pill"><img src="icons/cs.png" alt="C#" width="20" height="20"> C#</span>
+        <span class="pill"><img src="icons/java.png" alt="Java" width="20" height="20"> Java</span>
+        <span class="pill"><img src="icons/python.png" alt="Python" width="20" height="20"> Python</span>
+        <span class="pill"><img src="icons/javascript.png" alt="JavaScript" width="20" height="20"> JavaScript</span>
+        <span class="pill"><img src="icons/typescript.png" alt="TypeScript" width="20" height="20"> TypeScript</span>
+        <span class="pill"><img src="icons/dotnet.png" alt=".NET" width="20" height="20"> .NET</span>
+        <span class="pill"><img src="icons/spring.png" alt="Spring" width="20" height="20"> Spring</span>
+        <span class="pill"><img src="icons/react.png" alt="React" width="20" height="20"> React</span>
+        <span class="pill"><img src="icons/sql.jpg" alt="SQL" width="20" height="20"> SQL</span>
+        <span class="pill"><img src="icons/html.png" alt="HTML" width="20" height="20"> HTML</span>
+        <span class="pill"><img src="icons/css.png" alt="CSS" width="20" height="20"> CSS</span>
+        <span class="pill"><img src="icons/unity.png" alt="Unity" width="20" height="20"> Unity</span>
+        <span class="pill"><img src="icons/blender.png" alt="Blender" width="20" height="20"> Blender</span>
+        <span class="pill"><img src="icons/git.png" alt="Git" width="20" height="20"> Git</span>
+        <span class="pill"><img src="icons/ai.jpg" alt="AI Integration" width="20" height="20"> AI Integration</span>
+      </div>
+    </section>
+
+    <section class="card" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <ul>
+        <li><i class="fas fa-envelope"></i>  <a class="external" href="mailto:nkokor@icloud.com">nkokor@icloud.com</a></li>
+        <li><i class="fab fa-linkedin"></i>  <a class="external" href="https://www.linkedin.com/in/nikolina-kokor/">linkedin.com/in/nikolina-kokor</a></li>
+        <li><i class="fab fa-github"></i>  <a class="external" href="https://github.com/nkokor">github.com/nkokor</a></li>
+        <li><i class="fas fa-phone"></i> +387 62 634 705</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>© <strong>Nikolina Kokor</strong></div>
+      <div>Built with ♥ — <a class="external" href="mailto:nkokor@icloud.com">nkokor@icloud.com</a></div>
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
